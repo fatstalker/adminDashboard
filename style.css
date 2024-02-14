@@ -1,0 +1,210 @@
+body {
+    display: grid;
+    grid-template-columns: 0.6fr 3fr;
+}
+
+.sidebar {
+    background-color: rgb(29, 128, 160);
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr 3fr;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+
+}
+.sidebarHeader {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin: 30px;
+    align-items: center;
+    justify-self: start;
+    gap: 20px;
+}
+#logo {
+    display: grid;
+    grid-template-columns: 15px 15px;
+    grid-template-rows: 8px 8px 8px;
+    gap: 4px;
+    grid-template-areas: 
+    "firstPiece secondPiece"
+    "firstPiece forthPiece"
+    "thirdPiece forthPiece"
+    ;
+    justify-content: start;
+    align-items: normal;
+}
+.sidebarFirst {
+    display: grid;
+    grid-template-rows: repeat(6, 40px);
+    margin: 20px;
+    margin-left: 40px;
+}
+.sidebarSecond {
+    display: grid;
+    grid-template-rows: repeat(3, 40px);
+    margin: 20px;
+    margin-left: 40px;
+}
+.sidebar>div>div {  /*targets single sidebar items*/
+    display: flex;
+    align-items: center;
+}
+.sidebar>.sidebarFirst>div>svg, .sidebar>.sidebarSecond>div>svg { /*target: svgs*/
+    width: 30px;
+    margin-right: 10%;
+}
+.mainContainer {
+    display: grid;
+    grid-template-rows: 200px 5fr;
+}
+header {
+    background-color: white;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    box-shadow: grey 0 1px 20px;
+    padding: 2%;
+
+}
+.headerOne, .headerTwo {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 4%;
+}
+.headerOneFirstChild {
+    display: grid;
+    gap: 5%;
+    grid-template-columns: 30px auto;
+    grid-template-rows: min-content;
+}
+.headerOneSecondChild {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    grid-template-rows: 20%;
+    align-items: center;
+    justify-content: end;
+    gap: 2%;
+}
+.headerTwoFirstChild {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2%;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+.headerTwoSecondChild {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5%;
+    align-items: center;
+}
+.headerTwoSecondChild>button {
+    height: 30%;
+    border-radius: 6px;
+    background-color: rgb(29, 128, 160);
+    color: white;
+    font-size: 90%;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.mainBody {
+    background-color: #DEE3EB;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: min-content;
+}
+.projects {
+    display: grid;
+    grid-area: 2 / 1 ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5%;
+    margin: 25px;
+}
+.projectDiv {
+    border: solid rgb(231, 222, 239);
+    border-left: solid rgb(29, 128, 160) 7px;
+    padding: 5%;
+    box-shadow: grey 0 1px 20px;
+    background-color: white;
+    display: grid;
+    grid-template-rows: auto auto 20px;
+}
+.projectButtons {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 22px 22px 22px;
+    gap: 10px;
+    justify-content: end;
+}
+.announcements {
+    display: grid;
+    gap: 10%;
+    grid-template-rows: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.announcementDiv {
+    display: grid;
+    background-color: white;
+    box-shadow: grey 0 1px 20px;
+    padding: 20px;
+}
+.announcement {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.announcement::first-line {
+    font-weight: 600;
+}
+
+.trending {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: repeat(4, 1fr);
+    padding: 20px;
+    padding-top: 5px;
+}
+
+span {
+    border-bottom: solid rgb(147, 145, 145) 1px;
+}
+
+.profileIcons {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(47, 136, 255);
+    border-radius: 50%;
+}
+.iconsCaption {
+    color: rgb(111, 88, 88);
+}
+.iconsCaption::first-line {
+    color: black;
+}
+
+#logo>div {
+    background-color: white;
+}
+#firstLogoPiece {
+    grid-area: firstPiece;
+}
+#secondLogoPiece {
+    grid-area: secondPiece;
+}
+#thirdLogoPiece {
+    grid-area: thirdPiece;
+}
+#forthLogoPiece {
+    grid-area: forthPiece;
+}
+:root {
+    background-color: #DEE3EB;
+    font-family: sans-serif;
+}
+/*svg { stroke è in qualche modo collegato alla colorazione dei componenti degli svg.
+    stroke: white;
+}*/
